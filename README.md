@@ -5,7 +5,7 @@ UI as Code
 
 There has been a trend of declaring UI in XML or other alterable files. This has been a fine idea when dealing with compiled code because you don't have to recompile to see any changes. This has changed recently in some fields, namely mobile, where changes still have to be deployed to a seperate device. Apple introduced SwiftUI for their platforms (mobile, web, desktop), Google introduced Flutter for cross-platform (mobile, web, desktop) and Jetpack Compose (mobile). These come after the rapid adoption of Facebook's React, which allowed for declaritive style creation of UI.
 
-When using a text file to describe UI there is a binding step where you create code objects to hold the generated UI. In Android, this takes the form of Button myButton = findById<Button>(R.id.myButton)` where `R.id.myButton` is the id declared in the XML file.
+When using a text file to describe UI there is a binding step where you create code objects to hold the generated UI. In Android, this takes the form of `Button myButton = findById<Button>(R.id.myButton)` where `R.id.myButton` is the id declared in the XML file.
 
 I read a bunch of opinions in writing this. Almost all of them were written before SwiftUI, Flutter, and Jetpack Compose. Almost all of them claim that writing the UI in XMl enforces a separation of concern; that writing the UI in code tightly couples the logic and UI. The pattern they all are advocating is to use `findViewById`. Which tightly couples any code that directly interacts with the result of that call. So it would seem that writing UI in XML is not a catch all for enforcing separation.
 
